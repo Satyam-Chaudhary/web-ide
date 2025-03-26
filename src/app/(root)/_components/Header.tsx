@@ -42,7 +42,7 @@ async function Header() {
 
             <div className="flex flex-col">
               <span className="block text-lg font-semibold bg-gradient-to-r from-blue-400 via-blue-300 to-purple-400 text-transparent bg-clip-text">
-                CodeCraft
+                Runix
               </span>
               <span className="block text-xs text-blue-400/60 font-medium">
                 Interactive Code Editor
@@ -75,10 +75,10 @@ async function Header() {
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-3">
             <ThemeSelector />
-            <LanguageSelector hasAccess={Boolean(convexUser?.isPro)} />
+            <LanguageSelector hasAccess={Boolean(true)} /> {/*from convexUser?.isPro to Boolean(true)*/}
           </div>
 
-          {!convexUser?.isPro && (
+          {/* {!convexUser?.isPro && (
             <Link
               href="/pricing"
               className="flex items-center gap-2 px-4 py-1.5 rounded-lg border border-amber-500/20 hover:border-amber-500/40 bg-gradient-to-r from-amber-500/10 
@@ -90,7 +90,7 @@ async function Header() {
                 Pro
               </span>
             </Link>
-          )}
+          )} */}
 
           <SignedIn>
             <RunButton />
